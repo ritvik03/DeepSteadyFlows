@@ -51,9 +51,9 @@ For a simpler formulation, I have kept the body force fields to 0 and lamda is s
 - **Validation split:** 0.2
 - **Metrics of evaluation:** MAE, MAPE, Cosine_proximity
 
-![loss](training_stats/loss.png)
-![cos](training_stats/cosine_proximity.png)
-![mape](training_stats/mape.png)
+![loss](logs_training_stats/loss.png)
+![cos](logs_training_stats/cosine_proximity.png)
+![mape](logs_training_stats/mape.png)
 
 ## Results
 Following are few of the cherry-picked results obtained
