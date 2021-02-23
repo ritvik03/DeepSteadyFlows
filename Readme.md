@@ -67,6 +67,6 @@ Following are few of the cherry-picked results obtained
 This work is based on an earlier of [DeepCFD](https://arxiv.org/abs/2004.08826). Few of the unused code and insipiration is from the [github repository](https://github.com/mdribeiro/DeepCFD) of the same paper although the architecture and loss functions are completely changed for better convergence. The data used to train the model is also provided in the repository. [Link to data here](https://zenodo.org/record/3666056/files/DeepCFD.zip?download=1) 
 
 ## About me
-This repository is made by Ritvik Pandey for the academic use as Maters Thesis Project (MTP) for Department of Mechanical Engineering, Indian Institute of Technology Kharagpur (IIT-KGP) under the guidance of Professor Rajaram Lakkaraju
+This repository is made by Ritvik Pandey for the academic use as Maters Thesis Project (MTP) for Department of Mechanical Engineering, Indian Institute of Technology Kharagpur (IIT-KGP)
 
 Contact: ritvik.pandey03@gmail.com
