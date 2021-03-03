@@ -55,6 +55,15 @@ For a simpler formulation, I have kept the body force fields to 0 and lamda is s
 ![cos](logs_training_stats/cosine_proximity.png)
 ![mape](logs_training_stats/mape.png)
 
+## Usage
+**Generating custon figures**
+- run draw.py and draw the outline of shape
+- press "m" to fill the shape
+- press "escape (esc)" to save the input 
+
+**Prediction of custom figure**
+- run predict.py 
+
 ## Results
 Following are few of the cherry-picked results obtained
 
