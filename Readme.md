@@ -64,6 +64,10 @@ For a simpler formulation, I have kept the body force fields to 0 and lamda is s
 **Prediction of custom figure**
 - run predict.py 
 
+[Link to Demo Video | Youtube](https://youtu.be/30F42OksEi4)
+
+<!-- ![demo](image_assets/custom_shape_prediction.gif) -->
+
 ## Results
 Following are few of the cherry-picked results obtained
 
