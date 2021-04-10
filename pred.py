@@ -80,7 +80,8 @@ def custom_loss(y_true, y_pred):
   return mae_loss + nv_loss 
 
 keras.backend.clear_session()
-model = tf.keras.models.load_model('../extra_material/best_model', compile=False)
+# model = tf.keras.models.load_model('../extra_material/best_model', compile=False)
+model = tf.keras.models.load_model('../extra_material/best_model_3_epoch200', compile=False)
 
 model.compile(loss=custom_loss, optimizer='adam', metrics=['mae', 'mape', 'cosine_proximity'])
 model.summary()

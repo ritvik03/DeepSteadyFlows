@@ -21,7 +21,12 @@ Computational Fluid Dynamics (CFD) simulation by the numerical solution of the N
 
 Loss function is a combination of mean absolute error (MAE) and the steady-state navier-strokes loss function based on the equation mentioned below
 
-![ns-eq](image_assets/ns_equation.png)
+<!-- ![continuity-eq](image_assets/continuity.png)
+![ns-eq](image_assets/ns_equation.png) -->
+
+
+<img src="image_assets/continuity.png" height="100px">
+<img src="image_assets/ns_equation.png" height="130px">
 
 Partial Differential terms and laplacian transform are computed using tensor gradient formulation from tensorflow library
 
@@ -29,18 +34,20 @@ Partial Differential terms and laplacian transform are computed using tensor gra
 
 **Steady-state-Navier-loss** : e<sub>x</sub><sup>2</sup> + e<sub>y</sub><sup>2</sup>
 
-e<sub>x</sub> : Error in steady state navier-stokes equation in X-direction
+- <strong>e<sub>x</sub></strong> : Error in steady state navier-stokes equation in X-direction
 
-e<sub>y</sub> : Error in steady state navier-stokes equation in Y-direction
+- <strong>e<sub>y</sub></strong> : Error in steady state navier-stokes equation in Y-direction
+
+- <strong>continuity_loss</strong> : Square of error in continuity equation in 2 dimensions
 
 ### Final loss function :
-Loss = MAE +  λ * steady_state_navier_loss 
+Loss = MAE +  λ * steady_state_navier_loss + continuity_loss
 
 For a simpler formulation, I have kept the body force fields to 0 and lamda is set to 1
 
 **[Note]:** More tinkering with network architecture and loss hyperparameters required. Also, generalize this to 3D
 
-[Link to trained model](https://drive.google.com/drive/folders/1T_Yk7x_s5eFpHl51o7Ld1oPHgth4W8gV?usp=sharing)
+[Link to trained model](https://drive.google.com/drive/folders/13U5BLoyLj9x_DjnVSvy8scluNLNI0-JM?usp=sharing)
 
 ![model](model.png)
 
@@ -53,7 +60,15 @@ For a simpler formulation, I have kept the body force fields to 0 and lamda is s
 
 ![loss](logs_training_stats/loss.png)
 ![cos](logs_training_stats/cosine_proximity.png)
-![mape](logs_training_stats/mape.png)
+<!-- ![mape](logs_training_stats/mape.png) -->
+
+## Results
+Following are few of the cherry-picked results obtained
+
+![1](image_assets/1.png)
+![2](image_assets/2.png)
+![3](image_assets/3.png)
+![4](image_assets/4.png)
 
 ## Usage
 **Generating custon figures**
@@ -64,17 +79,20 @@ For a simpler formulation, I have kept the body force fields to 0 and lamda is s
 **Prediction of custom figure**
 - run predict.py 
 
-[Link to Demo Video | Youtube](https://youtu.be/30F42OksEi4)
+[Link to Demo Video | Youtube](https://youtu.be/ixl7-_DvO6o)
 
-<!-- ![demo](image_assets/custom_shape_prediction.gif) -->
+![demo](image_assets/demo_mtp2.gif)
 
-## Results
-Following are few of the cherry-picked results obtained
+## Custom Results
+Ignoring some image artifacts, the custom results look fairly realistic too with navier strokes based loss in the ranges of 0.004, hence can be said to be a good approximation of steady state simulations in significantly less time
 
-![1](image_assets/1.png)
-![2](image_assets/2.png)
-![3](image_assets/3.png)
-![4](image_assets/4.png)
+![6](custom_outputs/semi_circle2.png)
+![5](custom_outputs/rectangle2.png)
+![4](custom_outputs/plus2.png)
+![3](custom_outputs/motorbike.png)
+![2](custom_outputs/mandir.png)
+![1](custom_outputs/bullet.png)
+![0](custom_outputs/v.png)
 
 ## Credits
 This work is based on an earlier of [DeepCFD](https://arxiv.org/abs/2004.08826). Few of the unused code and insipiration is from the [github repository](https://github.com/mdribeiro/DeepCFD) of the same paper although the architecture and loss functions are completely changed for better convergence. The data used to train the model is also provided in the repository. [Link to data here](https://zenodo.org/record/3666056/files/DeepCFD.zip?download=1) 
