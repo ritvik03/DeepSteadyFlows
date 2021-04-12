@@ -79,7 +79,7 @@ Following are few of the cherry-picked results obtained
 **Prediction of custom figure**
 - run predict.py 
 
-[Link to Demo Video | Youtube](https://youtu.be/ixl7-_DvO6o)
+[Link to Demo Video | Youtube](https://www.youtube.com/watch?v=6PLUthu24bo)
 
 ![demo](image_assets/demo_mtp2.gif)
 
