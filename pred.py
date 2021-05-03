@@ -21,7 +21,7 @@ import matplotlib.pyplot as plt
 
 # Viewing side by side with cropped version
 def plot_input_output(shape, u, v, p, index = np.random.randint(0,981)):
-  # plt.figure(figsize=(15,55))
+  plt.figure(figsize=(7,3))
   # index = np.random.randint(0,dataX.shape[0])
   # fig, ax = plt.subplots(ncols=4, nrows=1)
   plt.subplot(1,4,1)
